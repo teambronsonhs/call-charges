@@ -376,7 +376,15 @@
     </style>
 </head>
 <body>
-
+<script>
+        // Redirect old URL patterns (e.g., /02079460000-call-charges) to homepage
+        const path = window.location.pathname;
+        const isOldUrl = path !== '/' && path.match(/\/[0-9\-]+-call-charges/);
+        
+        if (isOldUrl) {
+            window.location.replace('https://call-charges.co.uk/');
+        }
+    </script>
 <header class="header">
     <div class="header-container">
         <a href="/" class="logo">📞 CALL CHARGES UK <small>| free checker</small></a>
