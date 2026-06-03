@@ -2,14 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting...</title>
+    <title>Call Charges UK</title>
     <script>
         const path = window.location.pathname;
         let number = path.substring(1).replace(/\.html$/, '').replace(/\//g, '');
         number = number.replace(/[^0-9]/g, '');
         
-        if (number && number.length > 3) {
-            window.location.replace(`https://call-charges.co.uk/#check=${number}`);
+        if (number && number.length > 2) {
+            // Extract the core number (e.g., 09065 from 09065-numbers)
+            const match = number.match(/^([0-9]{3,})/);
+            const cleanNumber = match ? match[1] : number;
+            window.location.replace(`https://call-charges.co.uk/#check=${cleanNumber}`);
         } else {
             window.location.replace('https://call-charges.co.uk/');
         }
