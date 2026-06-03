@@ -275,11 +275,49 @@ function setExample(num) {
     updateUI(num);
 }
 
+// AUTO-DETECT NUMBER FROM URL (supports both /09065-numbers and #check=09065)
+function checkNumberFromURL() {
+    let number = null;
+    
+    // First, check URL hash (e.g., #check=09065)
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#check=')) {
+        number = hash.substring(7);
+    }
+    
+    // If not in hash, check the pathname (e.g., /09065-numbers)
+    if (!number) {
+        const path = window.location.pathname;
+        if (path && path !== '/' && path !== '/index.html') {
+            const match = path.match(/\/([0-9\-]+)/);
+            if (match) {
+                number = match[1].replace(/-/g, '');
+            }
+        }
+    }
+    
+    // If we found a number, auto-fill and auto-check
+    if (number && number.length > 3) {
+        document.getElementById('phoneNumber').value = number;
+        setTimeout(() => {
+            document.getElementById('checkBtn').click();
+            // Update URL hash without reloading
+            if (window.location.hash !== `#check=${number}`) {
+                window.history.replaceState(null, '', `#check=${number}`);
+            }
+        }, 300);
+    }
+}
+
 document.getElementById('checkBtn').addEventListener('click', () => {
     let raw = document.getElementById('phoneNumber').value.trim();
     if (raw === "") { alert("Please enter a UK phone number"); return; }
     updateUI(raw);
+    // Update URL hash to match the checked number
+    const cleanNumber = raw.replace(/\s/g, '');
+    window.history.replaceState(null, '', `#check=${cleanNumber}`);
 });
+
 document.getElementById('phoneNumber').addEventListener('keypress', (e) => { if (e.key === 'Enter') document.getElementById('checkBtn').click(); });
 
 function buildRatesGrid() {
@@ -302,7 +340,14 @@ function buildRatesGrid() {
 }
 
 buildRatesGrid();
-setTimeout(() => setExample("02079460000"), 100);
+
+// Check for number in URL after page loads
+window.addEventListener('load', function() {
+    setTimeout(checkNumberFromURL, 200);
+});
+
+// Also check after the page is fully rendered (fallback)
+setTimeout(checkNumberFromURL, 500);
 </script>
 </body>
 </html>
