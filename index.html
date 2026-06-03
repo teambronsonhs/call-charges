@@ -3,391 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Call Charges UK | Check UK Phone Number Costs Instantly</title>
+    <title>Call Charges UK | Free UK Phone Number Cost Checker</title>
     <meta name="description" content="Free UK call charges checker. Enter any UK landline or mobile number to see call costs. Green = cheap, Amber = medium, Red = expensive. Updated for 2025/26.">
     <meta name="keywords" content="UK call charges, phone number cost checker, 0800 charges, 0345 cost, 07 mobile rates, premium rate numbers UK, call cost lookup">
     <meta name="author" content="Call Charges UK">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.call-charges.co.uk/">
-    <meta property="og:title" content="Call Charges UK | Free Phone Number Cost Checker">
-    <meta property="og:description" content="Check UK call costs instantly. Enter any number — we'll tell you if it's cheap, medium, or expensive to call.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.call-charges.co.uk/">
-    <meta property="og:image" content="https://www.call-charges.co.uk/telephone-icon.png">
-    <meta property="og:locale" content="en_GB">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Call Charges UK | Free Phone Number Cost Checker">
-    <meta name="twitter:description" content="Check UK call costs instantly. Enter any number — we'll tell you if it's cheap, medium, or expensive to call.">
-    <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234da8ff'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E">
+    <link rel="canonical" href="https://call-charges.co.uk/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234da8ff'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Google AdSense -->
+    <!-- Google AdSense - Auto Ads only -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9372101106094036" crossorigin="anonymous"></script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%); color: #e8e8f0; line-height: 1.5; }
+        
+        :root {
+            --primary: #4da8ff;
+            --primary-dark: #2980b9;
+            --primary-glow: rgba(77,168,255,0.3);
+            --dark-card: #1a1a2e;
+            --surface: #16162a;
+            --border: #2a2a3e;
+            --green: #2ecc71;
+            --amber: #f39c12;
+            --red: #e74c3c;
         }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-            color: #e8e8f0;
-            line-height: 1.5;
-            min-height: 100vh;
-        }
-
-        /* Header */
-        .header {
-            background: rgba(15, 15, 26, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(77, 168, 255, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1rem 1.5rem;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff, #4da8ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-decoration: none;
-        }
-
-        .logo small {
-            font-size: 0.8rem;
-            font-weight: 400;
-            color: #888;
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            color: #ccc;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #4da8ff;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff, #4da8ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #aaa;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Phone Input Card */
+        
+        .header { background: rgba(15,15,26,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(77,168,255,0.2); position: sticky; top: 0; z-index: 100; padding: 1rem 2rem; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .logo { font-size: 1.6rem; font-weight: 800; background: linear-gradient(135deg, #fff, var(--primary)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo i { background: none; color: var(--primary); }
+        .nav-links { display: flex; gap: 1.2rem; }
+        .nav-links a { color: #ccc; text-decoration: none; font-weight: 500; transition: 0.2s; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .hero { text-align: center; margin-bottom: 2rem; }
+        .hero h1 { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #fff, var(--primary)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 0.5rem; }
+        .hero p { color: #9aa4bf; max-width: 600px; margin: 0 auto; font-size: 1rem; }
+        
         .checker-card {
-            background: rgba(30, 30, 50, 0.6);
+            background: rgba(26, 26, 46, 0.7);
             backdrop-filter: blur(10px);
             border-radius: 32px;
             padding: 2rem;
-            border: 1px solid rgba(77, 168, 255, 0.2);
-            box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(77,168,255,0.2);
+            box-shadow: 0 20px 35px -15px rgba(0,0,0,0.5);
             margin-bottom: 2rem;
         }
-
+        
         .input-group {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
-
         .phone-input {
             flex: 1;
             min-width: 250px;
-            padding: 1.2rem 1.5rem;
-            font-size: 1.2rem;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
             border: none;
             border-radius: 60px;
-            background: #1e1e2e;
+            background: #1e1e32;
             color: #fff;
             outline: none;
-            transition: all 0.3s;
             font-family: monospace;
             letter-spacing: 0.5px;
         }
-
-        .phone-input:focus {
-            box-shadow: 0 0 0 2px #4da8ff;
-            background: #252540;
-        }
-
+        .phone-input:focus { box-shadow: 0 0 0 2px var(--primary); background: #252540; }
         .check-btn {
-            padding: 1.2rem 2.5rem;
-            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
             font-weight: 700;
             border: none;
             border-radius: 60px;
-            background: linear-gradient(135deg, #4da8ff, #007bff);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .check-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(77, 168, 255, 0.4);
-        }
-
-        .example-hint {
-            text-align: center;
-            font-size: 0.85rem;
-            color: #777;
-        }
-
-        .example-hint button {
-            background: none;
-            border: none;
-            color: #4da8ff;
-            cursor: pointer;
-            font-size: 0.85rem;
-            margin: 0 0.2rem;
-        }
-
-        /* Result Card */
-        .result-card {
-            background: rgba(20, 20, 35, 0.8);
-            border-radius: 28px;
-            padding: 1.8rem;
-            margin-top: 1.5rem;
-            border-left: 6px solid;
-            transition: all 0.3s;
-            display: none;
-        }
-
-        .result-card.show {
-            display: block;
-            animation: fadeInUp 0.4s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .result-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-
-        .traffic-light {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            box-shadow: 0 0 12px currentColor;
-        }
-
-        .traffic-light.green {
-            background: #2ecc71;
-            box-shadow: 0 0 15px #2ecc71;
-        }
-
-        .traffic-light.amber {
-            background: #f39c12;
-            box-shadow: 0 0 15px #f39c12;
-        }
-
-        .traffic-light.red {
-            background: #e74c3c;
-            box-shadow: 0 0 15px #e74c3c;
-        }
-
-        .result-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            font-family: monospace;
-        }
-
-        .cost-details {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .cost-details p {
-            margin: 0.5rem 0;
-        }
-
-        /* Info Cards Grid */
-        .info-section {
-            margin: 2.5rem 0;
-        }
-
-        .section-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .rates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .rate-card {
-            background: rgba(25, 25, 40, 0.7);
-            border-radius: 24px;
-            padding: 1.2rem;
-            border: 1px solid rgba(77, 168, 255, 0.15);
             transition: 0.2s;
         }
-
-        .rate-card:hover {
-            border-color: #4da8ff;
+        .check-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(77,168,255,0.4); }
+        .example-hint { text-align: center; font-size: 0.8rem; color: #777; }
+        .example-hint button { background: none; border: none; color: var(--primary); cursor: pointer; font-size: 0.8rem; margin: 0 0.2rem; }
+        
+        .result-card {
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 28px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-left: 6px solid;
+            display: none;
         }
-
-        .rate-prefix {
-            font-size: 1.4rem;
-            font-weight: 800;
-            font-family: monospace;
-            color: #4da8ff;
+        .result-card.show { display: block; animation: fadeInUp 0.4s ease; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .result-header { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .traffic-light { width: 55px; height: 55px; border-radius: 50%; box-shadow: 0 0 12px currentColor; }
+        .traffic-light.green { background: var(--green); box-shadow: 0 0 15px var(--green); }
+        .traffic-light.amber { background: var(--amber); box-shadow: 0 0 15px var(--amber); }
+        .traffic-light.red { background: var(--red); box-shadow: 0 0 15px var(--red); }
+        .result-number { font-size: 1.5rem; font-weight: 700; font-family: monospace; }
+        .cost-details { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .cost-details p { margin: 0.5rem 0; }
+        
+        .rates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
-
-        .color-badge {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 6px;
+        .rate-card {
+            background: rgba(26, 26, 46, 0.6);
+            border-radius: 20px;
+            padding: 1rem;
+            border: 1px solid rgba(77,168,255,0.15);
         }
-
-        /* Ad Containers */
-        .ad-top, .ad-middle, .ad-bottom {
-            text-align: center;
-            margin: 1.5rem 0;
-            min-height: 90px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+        .rate-card:hover { border-color: var(--primary); }
+        .rate-prefix { font-size: 1.2rem; font-weight: 800; font-family: monospace; color: var(--primary); }
+        .color-badge { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; }
+        
+        footer { text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem; font-size: 0.75rem; color: #6c7a8a; }
+        footer a { color: var(--primary); text-decoration: none; }
+        
+        @media (max-width: 700px) {
+            .container { padding: 1rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .checker-card { padding: 1.5rem; }
+            .input-group { flex-direction: column; }
+            .check-btn { width: 100%; }
+            .result-header { flex-direction: column; text-align: center; }
         }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: 2rem;
-            font-size: 0.8rem;
-            color: #777;
-        }
-
-        @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .checker-card {
-                padding: 1.5rem;
-            }
-            .input-group {
-                flex-direction: column;
-            }
-            .check-btn {
-                width: 100%;
-            }
-        }
-
-        hr.heartbeat {
-            margin: 20px auto;
-            width: 90%;
-            border: none;
-            height: 2px;
-            background: #2a2a3a;
-            position: relative;
-        }
-        hr.heartbeat::before {
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 2px;
-            background: #4da8ff;
-            animation: slideLight 4s infinite linear;
-        }
-        @keyframes slideLight {
-            0% { left: 0%; }
-            50% { left: calc(100% - 6px); }
-            100% { left: 0%; }
-        }
+        .section-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; text-align: center; }
     </style>
 </head>
 <body>
-<script>
-        // Redirect old URL patterns (e.g., /02079460000-call-charges) to homepage
-        const path = window.location.pathname;
-        const isOldUrl = path !== '/' && path.match(/\/[0-9\-]+-call-charges/);
-        
-        if (isOldUrl) {
-            window.location.replace('https://call-charges.co.uk/');
-        }
-    </script>
+
 <header class="header">
     <div class="header-container">
-        <a href="/" class="logo">📞 CALL CHARGES UK <small>| free checker</small></a>
+        <a href="/" class="logo"><i class="fas fa-phone-alt"></i> CALL CHARGES UK</a>
         <div class="nav-links">
             <a href="#checker">Check Number</a>
             <a href="#rates">Rate Guides</a>
@@ -395,225 +153,156 @@
     </div>
 </header>
 
-<main class="container">
-    <!-- Top Ad -->
-    <div class="ad-top">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9372101106094036"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
+<div class="container">
     <div class="hero">
         <h1>📞 UK Call Charges <span style="color:#4da8ff;">Instant Checker</span></h1>
         <p>Enter any landline, mobile, or special service number — get an instant cost estimate with traffic light rating.</p>
     </div>
 
-    <!-- Checker Card -->
     <div class="checker-card" id="checker">
         <div class="input-group">
             <input type="tel" id="phoneNumber" class="phone-input" placeholder="e.g., 02079460000, 07700900000, 08001111" inputmode="numeric">
             <button id="checkBtn" class="check-btn"><i class="fas fa-search"></i> Check Call Cost</button>
         </div>
         <div class="example-hint">
-            💡 Try: <button onclick="setExample('02079460000')">0207 946 0000</button> · 
+            💡 Try: <button onclick="setExample('02079460000')">020 7946 0000</button> · 
             <button onclick="setExample('07700900000')">07700 900000</button> · 
             <button onclick="setExample('08001111')">0800 1111</button> · 
             <button onclick="setExample('0845123456')">0845 123456</button>
         </div>
 
-        <!-- Result Panel -->
         <div id="resultPanel" class="result-card">
             <div class="result-header">
                 <div id="trafficLight" class="traffic-light green"></div>
                 <div><span id="resultNumber" class="result-number"></span><br><span id="ratingLabel" style="font-weight:600;">Standard rate</span></div>
             </div>
-            <div id="costDetails" class="cost-details">
-                <p>🟢 <strong>Cost rating:</strong> Normal geographic rates apply.</p>
-                <p>📞 Landline: 2p–10p/min | 📱 Mobile: 10p–40p/min</p>
-                <p>✅ Usually included in call packages.</p>
-            </div>
+            <div id="costDetails" class="cost-details"></div>
         </div>
     </div>
 
-    <!-- Middle Ad -->
-    <div class="ad-middle">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9372101106094036"
-             data-ad-slot="1234567891"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <!-- Quick Reference Guide -->
-    <div class="info-section" id="rates">
+    <div id="rates">
         <h2 class="section-title">📋 UK Number Prefix Guide</h2>
         <div class="rates-grid" id="ratesGrid"></div>
     </div>
+</div>
 
-    <!-- Bottom Ad -->
-    <div class="ad-bottom">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9372101106094036"
-             data-ad-slot="1234567892"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-</main>
-
-<hr class="heartbeat">
-<footer class="footer">
-    <p>© Call Charges UK 2025 — Free, independent call cost checker. Data for guidance only. <br> Always check with your provider for exact pricing.</p>
+<footer>
+    <p>© Call Charges UK 2025 — Free, independent call cost checker. Data for guidance only.</p>
+    <p>Always check with your provider for exact pricing.</p>
+    <p><a href="sitemap.xml">📄 Sitemap</a></p>
 </footer>
 
 <script>
-    // Complete Rate Lookup Database (based on original ASP logic)
-    const rateDatabase = [
-        { prefix: "01", color: "green", rating: "Geographic (Landline)", desc: "Standard geographic numbers (e.g., 0121, 01904). Calls: Landline 2p-10p/min, Mobile 10p-40p/min. Usually included in free call packages." },
-        { prefix: "02", color: "green", rating: "Geographic (Landline)", desc: "Standard geographic numbers (e.g., 020, 029). Calls: Landline 2p-10p/min, Mobile 10p-40p/min. Usually included in free call packages." },
-        { prefix: "030", color: "green", rating: "Non-profit & Public bodies", desc: "0300 numbers (e.g., charities, NHS). Cost same as 01/02 numbers. Included in inclusive minutes." },
-        { prefix: "034", color: "green", rating: "UK-wide (lo-call)", desc: "0345, 0344 numbers. Cost no more than geographic calls. Included in call packages." },
-        { prefix: "037", color: "green", rating: "UK-wide (lo-call)", desc: "0370, 0371 numbers. Cost no more than geographic calls." },
-        { prefix: "0800", color: "green", rating: "Freephone", desc: "Free from landlines and most mobiles. Some mobile providers may charge but typically free." },
-        { prefix: "0808", color: "green", rating: "Freephone", desc: "Free from landlines and most mobiles (e.g., 0808 157)." },
-        { prefix: "0500", color: "green", rating: "Freephone (legacy)", desc: "Free from landlines, may cost up to 31p/min from mobiles." },
-        { prefix: "0845", color: "amber", rating: "Business Rate", desc: "Landline: 1p-10.5p/min plus setup. Mobile: 12p-41p/min. Not always included in bundles." },
-        { prefix: "0843", color: "amber", rating: "Business Rate", desc: "0843 numbers: Landline up to 13p/min, mobile up to 41p/min." },
-        { prefix: "0844", color: "amber", rating: "Business Rate", desc: "0844 numbers: Landline up to 13p/min, mobile up to 41p/min." },
-        { prefix: "0870", color: "amber", rating: "Business Rate", desc: "0870: Up to 10p/min landline, 12p-41p/min mobile. Some providers include in packages." },
-        { prefix: "0871", color: "red", rating: "Premium Rate", desc: "Calls cost 5p-12p/min from landline + setup. Mobiles: 25p-41p/min. Regulated by PhonepayPlus." },
-        { prefix: "0872", color: "red", rating: "Premium Rate", desc: "Premium rate service, higher charges. Check before calling." },
-        { prefix: "0873", color: "red", rating: "Premium Rate", desc: "Premium rate service, higher charges." },
-        { prefix: "09", color: "red", rating: "Premium Rate", desc: "09 numbers (competitions, chat, adult). Up to £1.53/min landline, up to £2.55/min mobile." },
-        { prefix: "118", color: "red", rating: "Directory Enquiries", desc: "118xxx numbers: Fixed fee up to £2.50 + up to £3/min. Very expensive." },
-        { prefix: "070", color: "red", rating: "Personal Numbers", desc: "070 'follow me' numbers: Landline 5p-50p/min + setup. Mobiles up to £1/min." },
-        { prefix: "07", color: "amber", rating: "Mobile Numbers", desc: "Standard mobile numbers (07xxx). Landline 5p-12p/min, Mobile 8p-40p/min depending on plan." },
-        { prefix: "076", color: "red", rating: "Paging / Personal", desc: "07624 etc. Can be expensive, similar to 070 rates." },
-        { prefix: "101", color: "amber", rating: "Police non-emergency", desc: "Costs 15p per call (landline & mobile). Fixed fee, no per-minute charge." },
-        { prefix: "111", color: "green", rating: "NHS 111", desc: "Free from landlines and mobiles." },
-        { prefix: "112", color: "green", rating: "Emergency (backup)", desc: "Emergency services — free of charge." },
-        { prefix: "999", color: "green", rating: "Emergency", desc: "Free from any phone." },
-        { prefix: "00800", color: "green", rating: "International Freephone", desc: "Free from landlines, may cost up to 31p/min from mobiles." }
-    ];
+// Complete Rate Lookup Database
+const rateDatabase = [
+    { prefix: "01", color: "green", rating: "Geographic (Landline)", desc: "Standard geographic numbers (e.g., 0121, 01904). Calls: Landline 2p-10p/min, Mobile 10p-40p/min. Usually included in free call packages." },
+    { prefix: "02", color: "green", rating: "Geographic (Landline)", desc: "Standard geographic numbers (e.g., 020, 029). Calls: Landline 2p-10p/min, Mobile 10p-40p/min. Usually included in free call packages." },
+    { prefix: "030", color: "green", rating: "Non-profit & Public bodies", desc: "0300 numbers (e.g., charities, NHS). Cost same as 01/02 numbers. Included in inclusive minutes." },
+    { prefix: "034", color: "green", rating: "UK-wide (lo-call)", desc: "0345, 0344 numbers. Cost no more than geographic calls. Included in call packages." },
+    { prefix: "037", color: "green", rating: "UK-wide (lo-call)", desc: "0370, 0371 numbers. Cost no more than geographic calls." },
+    { prefix: "0800", color: "green", rating: "Freephone", desc: "Free from landlines and most mobiles. Some mobile providers may charge but typically free." },
+    { prefix: "0808", color: "green", rating: "Freephone", desc: "Free from landlines and most mobiles (e.g., 0808 157)." },
+    { prefix: "0500", color: "green", rating: "Freephone (legacy)", desc: "Free from landlines, may cost up to 31p/min from mobiles." },
+    { prefix: "0845", color: "amber", rating: "Business Rate", desc: "Landline: 1p-10.5p/min plus setup. Mobile: 12p-41p/min. Not always included in bundles." },
+    { prefix: "0843", color: "amber", rating: "Business Rate", desc: "0843 numbers: Landline up to 13p/min, mobile up to 41p/min." },
+    { prefix: "0844", color: "amber", rating: "Business Rate", desc: "0844 numbers: Landline up to 13p/min, mobile up to 41p/min." },
+    { prefix: "0870", color: "amber", rating: "Business Rate", desc: "0870: Up to 10p/min landline, 12p-41p/min mobile. Some providers include in packages." },
+    { prefix: "0871", color: "red", rating: "Premium Rate", desc: "Calls cost 5p-12p/min from landline + setup. Mobiles: 25p-41p/min. Regulated by PhonepayPlus." },
+    { prefix: "0872", color: "red", rating: "Premium Rate", desc: "Premium rate service, higher charges. Check before calling." },
+    { prefix: "0873", color: "red", rating: "Premium Rate", desc: "Premium rate service, higher charges." },
+    { prefix: "09", color: "red", rating: "Premium Rate", desc: "09 numbers (competitions, chat, adult). Up to £1.53/min landline, up to £2.55/min mobile." },
+    { prefix: "118", color: "red", rating: "Directory Enquiries", desc: "118xxx numbers: Fixed fee up to £2.50 + up to £3/min. Very expensive." },
+    { prefix: "070", color: "red", rating: "Personal Numbers", desc: "070 'follow me' numbers: Landline 5p-50p/min + setup. Mobiles up to £1/min." },
+    { prefix: "07", color: "amber", rating: "Mobile Numbers", desc: "Standard mobile numbers (07xxx). Landline 5p-12p/min, Mobile 8p-40p/min depending on plan." },
+    { prefix: "076", color: "red", rating: "Paging / Personal", desc: "07624 etc. Can be expensive, similar to 070 rates." },
+    { prefix: "101", color: "amber", rating: "Police non-emergency", desc: "Costs 15p per call (landline & mobile). Fixed fee, no per-minute charge." },
+    { prefix: "111", color: "green", rating: "NHS 111", desc: "Free from landlines and mobiles." },
+    { prefix: "112", color: "green", rating: "Emergency (backup)", desc: "Emergency services — free of charge." },
+    { prefix: "999", color: "green", rating: "Emergency", desc: "Free from any phone." },
+    { prefix: "00800", color: "green", rating: "International Freephone", desc: "Free from landlines, may cost up to 31p/min from mobiles." }
+];
 
-    // Helper: get prefix match
-    function getRateForNumber(number) {
-        let clean = number.replace(/\s/g, '').replace(/[^0-9]/g, '');
-        if (!clean) return null;
-        // Special shortcodes
-        if (clean === "101") return rateDatabase.find(r => r.prefix === "101");
-        if (clean === "111") return rateDatabase.find(r => r.prefix === "111");
-        if (clean === "112") return rateDatabase.find(r => r.prefix === "112");
-        if (clean === "999") return rateDatabase.find(r => r.prefix === "999");
-        if (clean.startsWith("00800")) return rateDatabase.find(r => r.prefix === "00800");
-        
-        // longest match first (sorted by length desc)
-        const sorted = [...rateDatabase].sort((a,b) => b.prefix.length - a.prefix.length);
-        for (let entry of sorted) {
-            if (clean.startsWith(entry.prefix)) {
-                return entry;
-            }
-        }
-        return null;
+function getRateForNumber(number) {
+    let clean = number.replace(/\s/g, '').replace(/[^0-9]/g, '');
+    if (!clean) return null;
+    if (clean === "101") return rateDatabase.find(r => r.prefix === "101");
+    if (clean === "111") return rateDatabase.find(r => r.prefix === "111");
+    if (clean === "112") return rateDatabase.find(r => r.prefix === "112");
+    if (clean === "999") return rateDatabase.find(r => r.prefix === "999");
+    if (clean.startsWith("00800")) return rateDatabase.find(r => r.prefix === "00800");
+    
+    const sorted = [...rateDatabase].sort((a,b) => b.prefix.length - a.prefix.length);
+    for (let entry of sorted) {
+        if (clean.startsWith(entry.prefix)) return entry;
     }
+    return null;
+}
 
-    function updateUI(number) {
-        const cleanNumber = number.replace(/\s/g, '');
-        const rate = getRateForNumber(cleanNumber);
-        const resultDiv = document.getElementById('resultPanel');
-        const trafficLight = document.getElementById('trafficLight');
-        const resultNumberSpan = document.getElementById('resultNumber');
-        const ratingLabel = document.getElementById('ratingLabel');
-        const costDetailsDiv = document.getElementById('costDetails');
-        
-        if (!rate) {
-            // Unknown number
-            trafficLight.className = "traffic-light red";
-            resultNumberSpan.innerText = cleanNumber || "?";
-            ratingLabel.innerText = "Unknown / Not recognised";
-            costDetailsDiv.innerHTML = `<p>⚠️ We could not identify this number prefix. It might be an invalid UK number or a very new range.</p>
-                                         <p>💡 Try geographic (01/02), mobile (07), or freephone (0800).</p>`;
-            resultDiv.classList.add("show");
-            return;
-        }
-        
-        // Apply correct color
-        let colorClass = "green";
-        if (rate.color === "amber") colorClass = "amber";
-        if (rate.color === "red") colorClass = "red";
-        trafficLight.className = `traffic-light ${colorClass}`;
-        resultNumberSpan.innerText = cleanNumber;
-        ratingLabel.innerText = rate.rating;
-        
-        let additionalInfo = "";
-        if (rate.prefix === "01" || rate.prefix === "02") additionalInfo = "<p>✅ Usually included in call packages and free minutes.</p>";
-        if (rate.prefix === "0800") additionalInfo = "<p>🎉 Free from landlines & most mobiles.</p>";
-        if (rate.prefix === "09") additionalInfo = "<p>⚠️ These numbers can be barred by your provider. Charges may exceed £2 per call.</p>";
-        if (rate.prefix === "07") additionalInfo = "<p>📱 Mobile rates vary heavily by network. Check your plan for exact costs.</p>";
-        
-        costDetailsDiv.innerHTML = `<p>🔵 <strong>${rate.rating}</strong> — ${rate.desc}</p>${additionalInfo}<p>🕒 Updated for 2025/26 UK regulations.</p>`;
+function updateUI(number) {
+    const cleanNumber = number.replace(/\s/g, '');
+    const rate = getRateForNumber(cleanNumber);
+    const resultDiv = document.getElementById('resultPanel');
+    const trafficLight = document.getElementById('trafficLight');
+    const resultNumberSpan = document.getElementById('resultNumber');
+    const ratingLabel = document.getElementById('ratingLabel');
+    const costDetailsDiv = document.getElementById('costDetails');
+    
+    if (!rate) {
+        trafficLight.className = "traffic-light red";
+        resultNumberSpan.innerText = cleanNumber || "?";
+        ratingLabel.innerText = "Unknown / Not recognised";
+        costDetailsDiv.innerHTML = `<p>⚠️ We could not identify this number prefix. It might be an invalid UK number or a very new range.</p><p>💡 Try geographic (01/02), mobile (07), or freephone (0800).</p>`;
         resultDiv.classList.add("show");
+        return;
     }
+    
+    let colorClass = rate.color === "green" ? "green" : (rate.color === "amber" ? "amber" : "red");
+    trafficLight.className = `traffic-light ${colorClass}`;
+    resultNumberSpan.innerText = cleanNumber;
+    ratingLabel.innerText = rate.rating;
+    
+    let additionalInfo = "";
+    if (rate.prefix === "01" || rate.prefix === "02") additionalInfo = "<p>✅ Usually included in call packages and free minutes.</p>";
+    if (rate.prefix === "0800") additionalInfo = "<p>🎉 Free from landlines & most mobiles.</p>";
+    if (rate.prefix === "09") additionalInfo = "<p>⚠️ These numbers can be barred by your provider. Charges may exceed £2 per call.</p>";
+    
+    costDetailsDiv.innerHTML = `<p>🔵 <strong>${rate.rating}</strong> — ${rate.desc}</p>${additionalInfo}<p>🕒 Updated for 2025/26 UK regulations.</p>`;
+    resultDiv.classList.add("show");
+}
 
-    function setExample(num) {
-        document.getElementById('phoneNumber').value = num;
-        updateUI(num);
-    }
+function setExample(num) {
+    document.getElementById('phoneNumber').value = num;
+    updateUI(num);
+}
 
-    document.getElementById('checkBtn').addEventListener('click', () => {
-        let raw = document.getElementById('phoneNumber').value.trim();
-        if (raw === "") {
-            alert("Please enter a UK phone number (e.g., 020 7946 0000)");
-            return;
+document.getElementById('checkBtn').addEventListener('click', () => {
+    let raw = document.getElementById('phoneNumber').value.trim();
+    if (raw === "") { alert("Please enter a UK phone number"); return; }
+    updateUI(raw);
+});
+document.getElementById('phoneNumber').addEventListener('keypress', (e) => { if (e.key === 'Enter') document.getElementById('checkBtn').click(); });
+
+function buildRatesGrid() {
+    const grid = document.getElementById('ratesGrid');
+    const seen = new Set();
+    const unique = [];
+    for (let r of rateDatabase) {
+        if (!seen.has(r.prefix)) {
+            seen.add(r.prefix);
+            unique.push(r);
         }
-        updateUI(raw);
-    });
-    
-    document.getElementById('phoneNumber').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            document.getElementById('checkBtn').click();
-        }
-    });
-    
-    // Build rates grid
-    function buildRatesGrid() {
-        const grid = document.getElementById('ratesGrid');
-        const uniquePrefixes = [];
-        const seen = new Set();
-        for (let r of rateDatabase) {
-            if (!seen.has(r.prefix)) {
-                seen.add(r.prefix);
-                uniquePrefixes.push(r);
-            }
-        }
-        grid.innerHTML = uniquePrefixes.map(rate => `
-            <div class="rate-card">
-                <div><span class="rate-prefix">${rate.prefix}...</span> 
-                <span><span class="color-badge" style="background: ${rate.color==='green'?'#2ecc71':rate.color==='amber'?'#f39c12':'#e74c3c'}"></span> ${rate.rating}</span></div>
-                <p style="font-size:0.8rem; margin-top:8px; color:#bbb;">${rate.desc.substring(0, 100)}${rate.desc.length>100?'…':''}</p>
-            </div>
-        `).join('');
     }
-    
-    // AdSense re-push after dynamic content (safe)
-    setTimeout(() => {
-        if (typeof (adsbygoogle) !== 'undefined') {
-            try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
-        }
-    }, 200);
-    
-    buildRatesGrid();
-    // Default example on load
-    setTimeout(() => setExample("02079460000"), 100);
+    grid.innerHTML = unique.map(rate => `
+        <div class="rate-card">
+            <div><span class="rate-prefix">${rate.prefix}...</span> 
+            <span><span class="color-badge" style="background: ${rate.color==='green'?'#2ecc71':rate.color==='amber'?'#f39c12':'#e74c3c'}"></span> ${rate.rating}</span></div>
+            <p style="font-size:0.75rem; margin-top:8px; color:#bbb;">${rate.desc.substring(0, 100)}${rate.desc.length>100?'…':''}</p>
+        </div>
+    `).join('');
+}
+
+buildRatesGrid();
+setTimeout(() => setExample("02079460000"), 100);
 </script>
-<!-- Font awesome for icons (optional) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </body>
 </html>
