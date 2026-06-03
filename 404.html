@@ -2,13 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://call-charges.co.uk/">
-    <script>
-        window.location.replace('https://call-charges.co.uk/');
-    </script>
     <title>Redirecting...</title>
+    <script>
+        const path = window.location.pathname;
+        let number = path.substring(1).replace(/\.html$/, '').replace(/\//g, '');
+        number = number.replace(/[^0-9]/g, '');
+        
+        if (number && number.length > 3) {
+            window.location.replace(`https://call-charges.co.uk/#check=${number}`);
+        } else {
+            window.location.replace('https://call-charges.co.uk/');
+        }
+    </script>
 </head>
-<body>
-    <p>Redirecting to <a href="https://call-charges.co.uk/">Call Charges UK</a>...</p>
-</body>
+<body>Loading...</body>
 </html>
